@@ -1,0 +1,111 @@
+2025-05-05T09:24:37.396278Z [-] Reading configuration from ['/home/rohit/Documents/new/cowrie/etc/cowrie.cfg.dist', '/home/rohit/Documents/new/cowrie/cowrie.cfg']
+2025-05-05T09:24:38.191849Z [-] Removing stale pidfile /home/rohit/Documents/new/cowrie/var/run/cowrie.pid
+2025-05-05T09:24:38.192482Z [-] Python Version 3.13.2 (main, Feb  5 2025, 01:23:35) [GCC 14.2.0]
+2025-05-05T09:24:38.192624Z [-] Twisted Version 24.11.0
+2025-05-05T09:24:38.192638Z [-] Cowrie Version 2.6.1
+2025-05-05T09:24:38.200487Z [-] Loaded output engine: jsonlog
+2025-05-05T09:24:38.202850Z [twisted.scripts._twistd_unix.UnixAppLogger#info] twistd 24.11.0 (/home/rohit/Documents/new/cowrie/cowrie-env/bin/python3.13 3.13.2) starting up.
+2025-05-05T09:24:38.202947Z [twisted.scripts._twistd_unix.UnixAppLogger#info] reactor class: twisted.internet.epollreactor.EPollReactor.
+2025-05-05T09:24:38.215758Z [-] CowrieSSHFactory starting on 2222
+2025-05-05T09:24:38.216992Z [cowrie.ssh.factory.CowrieSSHFactory#info] Starting factory <cowrie.ssh.factory.CowrieSSHFactory object at 0x7f629278fcb0>
+2025-05-05T09:24:38.298108Z [-] Ready to accept SSH connections
+2025-05-05T09:24:48.937627Z [cowrie.ssh.factory.CowrieSSHFactory] New connection: 127.0.0.1:56858 (127.0.0.1:2222) [session: 3833b365eb91]
+2025-05-05T09:24:48.940835Z [HoneyPotSSHTransport,0,127.0.0.1] Remote SSH version: SSH-2.0-OpenSSH_9.9p1 Debian-3
+2025-05-05T09:24:48.946243Z [HoneyPotSSHTransport,0,127.0.0.1] SSH client hassh fingerprint: 0babd4b68a5f3757987be75fe35ad60a
+2025-05-05T09:24:48.948460Z [cowrie.ssh.transport.HoneyPotSSHTransport#debug] kex alg=b'curve25519-sha256' key alg=b'ssh-ed25519'
+2025-05-05T09:24:48.948556Z [cowrie.ssh.transport.HoneyPotSSHTransport#debug] outgoing: b'aes128-ctr' b'hmac-sha2-256' b'none'
+2025-05-05T09:24:48.948603Z [cowrie.ssh.transport.HoneyPotSSHTransport#debug] incoming: b'aes128-ctr' b'hmac-sha2-256' b'none'
+2025-05-05T09:24:48.996986Z [cowrie.ssh.transport.HoneyPotSSHTransport#debug] NEW KEYS
+2025-05-05T09:24:48.998049Z [cowrie.ssh.transport.HoneyPotSSHTransport#debug] starting service b'ssh-userauth'
+2025-05-05T09:24:49.000669Z [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] b'root' trying auth b'none'
+2025-05-05T09:24:51.248141Z [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] b'root' trying auth b'password'
+2025-05-05T09:24:51.248575Z [HoneyPotSSHTransport,0,127.0.0.1] Could not read etc/userdb.txt, default database activated
+2025-05-05T09:24:51.248816Z [HoneyPotSSHTransport,0,127.0.0.1] login attempt [b'root'/b'rrrr'] succeeded
+2025-05-05T09:24:51.249303Z [HoneyPotSSHTransport,0,127.0.0.1] Initialized emulated server as architecture: linux-x64-lsb
+2025-05-05T09:24:51.260007Z [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] b'root' authenticated with b'password'
+2025-05-05T09:24:51.260345Z [cowrie.ssh.transport.HoneyPotSSHTransport#debug] starting service b'ssh-connection'
+2025-05-05T09:24:51.261250Z [cowrie.ssh.connection.CowrieSSHConnection#debug] got channel b'session' request
+2025-05-05T09:24:51.261492Z [cowrie.ssh.session.HoneyPotSSHSession#info] channel open
+2025-05-05T09:24:51.261561Z [cowrie.ssh.connection.CowrieSSHConnection#debug] got global b'no-more-sessions@openssh.com' request
+2025-05-05T09:24:51.297773Z [twisted.conch.ssh.session#info] Handling pty request: b'xterm-256color' (24, 80, 0, 0)
+2025-05-05T09:24:51.297974Z [SSHChannel session (0) on SSHService b'ssh-connection' on HoneyPotSSHTransport,0,127.0.0.1] Terminal Size: 80 24
+2025-05-05T09:24:51.298970Z [SSHChannel session (0) on SSHService b'ssh-connection' on HoneyPotSSHTransport,0,127.0.0.1] request_env: LANG=en_IN
+2025-05-05T09:24:51.299858Z [twisted.conch.ssh.session#info] Getting shell
+2025-05-05T09:27:51.370541Z [twisted.conch.ssh.session#info] exitCode: 1
+2025-05-05T09:27:51.371975Z [cowrie.ssh.connection.CowrieSSHConnection#debug] sending request b'exit-status'
+2025-05-05T09:27:51.373345Z [-] Closing TTY Log: var/lib/cowrie/tty/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 after 180.1 seconds
+2025-05-05T09:27:51.373694Z [cowrie.ssh.connection.CowrieSSHConnection#info] sending close 0
+2025-05-05T09:27:51.377889Z [cowrie.ssh.session.HoneyPotSSHSession#info] remote close
+2025-05-05T09:27:51.378938Z [HoneyPotSSHTransport,0,127.0.0.1] Got remote error, code 11 reason: b'disconnected by user'
+2025-05-05T09:27:51.380574Z [HoneyPotSSHTransport,0,127.0.0.1] avatar root logging out
+2025-05-05T09:27:51.380929Z [cowrie.ssh.transport.HoneyPotSSHTransport#info] connection lost
+2025-05-05T09:27:51.381117Z [HoneyPotSSHTransport,0,127.0.0.1] Connection lost after 182.4 seconds
+2025-05-05T11:15:04.169543Z [-] Reading configuration from ['/home/rohit/Documents/new/cowrie/etc/cowrie.cfg.dist', '/home/rohit/Documents/new/cowrie/cowrie.cfg']
+2025-05-05T11:15:05.031998Z [-] Removing stale pidfile /home/rohit/Documents/new/cowrie/var/run/cowrie.pid
+2025-05-05T11:15:05.032702Z [-] Python Version 3.13.2 (main, Feb  5 2025, 01:23:35) [GCC 14.2.0]
+2025-05-05T11:15:05.032738Z [-] Twisted Version 24.11.0
+2025-05-05T11:15:05.032748Z [-] Cowrie Version 2.6.1
+2025-05-05T11:15:05.041258Z [-] Loaded output engine: jsonlog
+2025-05-05T11:15:05.044516Z [twisted.scripts._twistd_unix.UnixAppLogger#info] twistd 24.11.0 (/home/rohit/Documents/new/cowrie/cowrie-env/bin/python3.13 3.13.2) starting up.
+2025-05-05T11:15:05.044635Z [twisted.scripts._twistd_unix.UnixAppLogger#info] reactor class: twisted.internet.epollreactor.EPollReactor.
+2025-05-05T11:15:05.057514Z [-] CowrieSSHFactory starting on 2222
+2025-05-05T11:15:05.058480Z [cowrie.ssh.factory.CowrieSSHFactory#info] Starting factory <cowrie.ssh.factory.CowrieSSHFactory object at 0x7feb2a1efcb0>
+2025-05-05T11:15:05.149783Z [-] Ready to accept SSH connections
+2025-05-05T12:43:22.987450Z [-] Reading configuration from ['/home/rohit/Documents/new/cowrie/etc/cowrie.cfg.dist', '/home/rohit/Documents/new/cowrie/cowrie.cfg']
+2025-05-05T12:43:23.711128Z [-] Removing stale pidfile /home/rohit/Documents/new/cowrie/var/run/cowrie.pid
+2025-05-05T12:43:23.711569Z [-] Python Version 3.13.2 (main, Feb  5 2025, 01:23:35) [GCC 14.2.0]
+2025-05-05T12:43:23.711607Z [-] Twisted Version 24.11.0
+2025-05-05T12:43:23.711618Z [-] Cowrie Version 2.6.1
+2025-05-05T12:43:23.719234Z [-] Loaded output engine: jsonlog
+2025-05-05T12:43:23.723253Z [twisted.scripts._twistd_unix.UnixAppLogger#info] twistd 24.11.0 (/home/rohit/Documents/new/cowrie/cowrie-env/bin/python3.13 3.13.2) starting up.
+2025-05-05T12:43:23.723353Z [twisted.scripts._twistd_unix.UnixAppLogger#info] reactor class: twisted.internet.epollreactor.EPollReactor.
+2025-05-05T12:43:23.733003Z [-] CowrieSSHFactory starting on 2222
+2025-05-05T12:43:23.733834Z [cowrie.ssh.factory.CowrieSSHFactory#info] Starting factory <cowrie.ssh.factory.CowrieSSHFactory object at 0x7f31c9587cb0>
+2025-05-05T12:43:23.833512Z [-] Ready to accept SSH connections
+2025-05-05T12:57:07.526962Z [cowrie.ssh.factory.CowrieSSHFactory] New connection: 127.0.0.1:51092 (127.0.0.1:2222) [session: 89d19f261de9]
+2025-05-05T12:57:07.562527Z [HoneyPotSSHTransport,0,127.0.0.1] Remote SSH version: SSH-2.0-OpenSSH_9.9p1 Debian-3
+2025-05-05T12:57:07.587108Z [HoneyPotSSHTransport,0,127.0.0.1] SSH client hassh fingerprint: 0babd4b68a5f3757987be75fe35ad60a
+2025-05-05T12:57:07.591152Z [cowrie.ssh.transport.HoneyPotSSHTransport#debug] kex alg=b'curve25519-sha256' key alg=b'ssh-ed25519'
+2025-05-05T12:57:07.592211Z [cowrie.ssh.transport.HoneyPotSSHTransport#debug] outgoing: b'aes128-ctr' b'hmac-sha2-256' b'none'
+2025-05-05T12:57:07.593357Z [cowrie.ssh.transport.HoneyPotSSHTransport#debug] incoming: b'aes128-ctr' b'hmac-sha2-256' b'none'
+2025-05-05T12:57:07.639849Z [cowrie.ssh.transport.HoneyPotSSHTransport#debug] NEW KEYS
+2025-05-05T12:57:07.643696Z [cowrie.ssh.transport.HoneyPotSSHTransport#debug] starting service b'ssh-userauth'
+2025-05-05T12:57:07.651379Z [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] b'root' trying auth b'none'
+2025-05-05T12:57:10.005284Z [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] b'root' trying auth b'password'
+2025-05-05T12:57:10.007534Z [HoneyPotSSHTransport,0,127.0.0.1] Could not read etc/userdb.txt, default database activated
+2025-05-05T12:57:10.010821Z [HoneyPotSSHTransport,0,127.0.0.1] login attempt [b'root'/b'ttttt'] succeeded
+2025-05-05T12:57:10.017827Z [HoneyPotSSHTransport,0,127.0.0.1] Initialized emulated server as architecture: linux-x64-lsb
+2025-05-05T12:57:10.045193Z [cowrie.ssh.userauth.HoneyPotSSHUserAuthServer#debug] b'root' authenticated with b'password'
+2025-05-05T12:57:10.045756Z [cowrie.ssh.transport.HoneyPotSSHTransport#debug] starting service b'ssh-connection'
+2025-05-05T12:57:10.047512Z [cowrie.ssh.connection.CowrieSSHConnection#debug] got channel b'session' request
+2025-05-05T12:57:10.048417Z [cowrie.ssh.session.HoneyPotSSHSession#info] channel open
+2025-05-05T12:57:10.050526Z [cowrie.ssh.connection.CowrieSSHConnection#debug] got global b'no-more-sessions@openssh.com' request
+2025-05-05T12:57:10.295156Z [twisted.conch.ssh.session#info] Handling pty request: b'xterm-256color' (24, 80, 0, 0)
+2025-05-05T12:57:10.295848Z [SSHChannel session (0) on SSHService b'ssh-connection' on HoneyPotSSHTransport,0,127.0.0.1] Terminal Size: 80 24
+2025-05-05T12:57:10.297197Z [SSHChannel session (0) on SSHService b'ssh-connection' on HoneyPotSSHTransport,0,127.0.0.1] request_env: LANG=en_IN
+2025-05-05T12:57:10.298896Z [twisted.conch.ssh.session#info] Getting shell
+2025-05-05T13:00:10.377040Z [twisted.conch.ssh.session#info] exitCode: 1
+2025-05-05T13:00:10.378514Z [cowrie.ssh.connection.CowrieSSHConnection#debug] sending request b'exit-status'
+2025-05-05T13:00:10.381139Z [-] Closing TTY Log: var/lib/cowrie/tty/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 after 180.1 seconds
+2025-05-05T13:00:10.381761Z [cowrie.ssh.connection.CowrieSSHConnection#info] sending close 0
+2025-05-05T13:00:10.384924Z [cowrie.ssh.session.HoneyPotSSHSession#info] remote close
+2025-05-05T13:00:10.385627Z [HoneyPotSSHTransport,0,127.0.0.1] Got remote error, code 11 reason: b'disconnected by user'
+2025-05-05T13:00:10.387789Z [HoneyPotSSHTransport,0,127.0.0.1] avatar root logging out
+2025-05-05T13:00:10.388155Z [cowrie.ssh.transport.HoneyPotSSHTransport#info] connection lost
+2025-05-05T13:00:10.388352Z [HoneyPotSSHTransport,0,127.0.0.1] Connection lost after 182.8 seconds
+2025-05-05T21:12:57.744719Z [-] Reading configuration from ['/home/rohit/Documents/new/cowrie/etc/cowrie.cfg.dist', '/home/rohit/Documents/new/cowrie/cowrie.cfg']
+2025-05-05T21:12:58.623036Z [-] Removing stale pidfile /home/rohit/Documents/new/cowrie/var/run/cowrie.pid
+2025-05-05T21:12:58.623567Z [-] Python Version 3.13.2 (main, Feb  5 2025, 01:23:35) [GCC 14.2.0]
+2025-05-05T21:12:58.623619Z [-] Twisted Version 24.11.0
+2025-05-05T21:12:58.623637Z [-] Cowrie Version 2.6.1
+2025-05-05T21:12:58.632780Z [-] Loaded output engine: jsonlog
+2025-05-05T21:12:58.637909Z [twisted.scripts._twistd_unix.UnixAppLogger#info] twistd 24.11.0 (/home/rohit/Documents/new/cowrie/cowrie-env/bin/python3.13 3.13.2) starting up.
+2025-05-05T21:12:58.638057Z [twisted.scripts._twistd_unix.UnixAppLogger#info] reactor class: twisted.internet.epollreactor.EPollReactor.
+2025-05-05T21:12:58.652903Z [-] CowrieSSHFactory starting on 2222
+2025-05-05T21:12:58.653826Z [cowrie.ssh.factory.CowrieSSHFactory#info] Starting factory <cowrie.ssh.factory.CowrieSSHFactory object at 0x7f47cf4c3cb0>
+2025-05-05T21:12:58.753895Z [-] Ready to accept SSH connections
+2025-05-05T21:13:11.685491Z [twisted.internet.base#info] Received SIGTERM, shutting down.
+2025-05-05T21:13:11.686263Z [-] (TCP Port 2222 Closed)
+2025-05-05T21:13:11.686592Z [cowrie.ssh.factory.CowrieSSHFactory#info] Stopping factory <cowrie.ssh.factory.CowrieSSHFactory object at 0x7f47cf4c3cb0>
+2025-05-05T21:13:11.686906Z [twisted.internet.base#info] Main loop terminated.
+2025-05-05T21:13:11.687258Z [twisted.scripts._twistd_unix.UnixAppLogger#info] Server Shut Down.
